@@ -2,21 +2,23 @@
 <h1>Books</h1>
 
 <table>
+  
+  
   <thead>
     <tr>
       <th>Title</th>
       <th>Body</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
       <tr>
-        <td>リーダブルコード</td>
-        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
-        <td><a class="show_26960" href="/books/26960">Show</a></td>
-        <td><a class="edit_26960" href="/books/26960/edit">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_26960" rel="nofollow" data-method="delete" href="/books/26960">Destroy</a></td>
+        <% @books.each do |book| %>
+        <br>
+         <sp><%= book.title %></p>
+         <p><%= book.body %></p>
+         
+        <% end %>
       </tr>
 
   </tbody>
